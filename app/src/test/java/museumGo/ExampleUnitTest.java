@@ -1,4 +1,4 @@
-package museum.go;
+package museumGo;
 
 import org.junit.Test;
 
