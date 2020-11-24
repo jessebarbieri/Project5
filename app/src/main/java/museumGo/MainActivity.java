@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 String clickedItem=(String) list.getItemAtPosition(position);
                 //Toast.makeText(MainActivity.this,clickedItem,Toast.LENGTH_LONG).show();
 
-                // Creates the intent for the second activity to open
+                // Creates the intent for the second activity to open and opens it when option clicked
                 Intent intent = new Intent(MainActivity.this, secondScreen.class);
                 startActivity(intent);
 
