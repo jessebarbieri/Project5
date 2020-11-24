@@ -11,6 +11,8 @@ public class secondScreen extends AppCompatActivity {
 
     String selectedMuseum;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
