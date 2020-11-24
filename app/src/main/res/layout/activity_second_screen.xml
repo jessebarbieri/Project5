@@ -4,4 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".secondScreen"/>
+    tools:context=".secondScreen">
+
+    <ImageView
+        android:id="@+id/museumPic"
+        android:layout_width="422dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/a_picture_of_the_museum_selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/metpic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

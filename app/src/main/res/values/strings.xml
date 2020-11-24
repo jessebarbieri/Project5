@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Museum Go</string>
+    <string name="a_picture_of_the_museum_selected">A picture of the museum selected</string>
 </resources>
