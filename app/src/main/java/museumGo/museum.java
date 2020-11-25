@@ -41,4 +41,12 @@ public class museum {
         return 0;
     }
 
+    /**
+     * Find total price with sales tax on it
+     * @return double total price
+     */
+    public double totalPrice(){
+        return 0;
+    }
+
 }
