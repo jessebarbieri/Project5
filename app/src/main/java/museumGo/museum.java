@@ -27,6 +27,19 @@ public class museum {
     }
 
     /**
+     * Getters for price
+     */
+    public int ticketPriceSt(){
+        return ticketPriceStudent;
+    }
+    public int ticketPriceS(){
+        return ticketPriceSenior;
+    }
+    public int ticketPriceA(){
+        return ticketPriceAdult;
+    }
+
+    /**
      * Add ticket to the current "list" of tickets
      * @return double new value
      */
