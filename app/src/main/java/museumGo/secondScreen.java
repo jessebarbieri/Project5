@@ -33,15 +33,20 @@ public class secondScreen extends AppCompatActivity {
 
         if(selectedMuseum.equals("The Metropolitan Museum of Art")){
             museumPic.setImageResource(R.drawable.metpic);
+            museum MMA = new museum(10, 20, 15);
         }
         else if(selectedMuseum.equals("Museum of Modern Art (MoMA)")){
             museumPic.setImageResource(R.drawable.momapic);
+            museum MOMA = new museum(11, 23, 17);
+
         }
         else if(selectedMuseum.equals("American Museum of Natural History")){
             museumPic.setImageResource(R.drawable.historypic);
+            museum AMNH = new museum(12, 23, 16);
         }
         else if(selectedMuseum.equals("Intrepid Sea, Air & Space Museum")){
             museumPic.setImageResource(R.drawable.intrepid);
+            museum Intrepid = new museum(8, 17, 12);
         }
 
 
