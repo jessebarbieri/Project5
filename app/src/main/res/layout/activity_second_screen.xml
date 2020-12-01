@@ -10,111 +10,184 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="365dp"
         android:layout_height="42dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="345dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Adult Ticket"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="365dp"
         android:layout_height="42dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="457dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Student Ticket"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="217dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="394dp"
         android:text="-"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="306dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="394dp"
         android:text="+"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="306dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="98dp"
         android:layout_height="46dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="399dp"
         android:text="Enter value here"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="98dp"
         android:layout_height="46dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="398dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="287dp"
         android:text="Enter value here"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="464dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="398dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="282dp"
         android:text="+"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="459dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="365dp"
         android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="456dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="233dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Senior Ticket"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="550dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="168dp"
         android:text="-"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="98dp"
         android:layout_height="46dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="173dp"
         android:text="Enter value here"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="608dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="168dp"
         android:text="+"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="54dp"
         android:layout_height="51dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="398dp"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="282dp"
         android:text="-"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="459dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/museumPic"
         android:layout_width="422dp"
         android:layout_height="200dp"
+        android:layout_marginBottom="531dp"
         android:contentDescription="@string/a_picture_of_the_museum_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/metpic" />
@@ -123,10 +196,16 @@
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="116dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Total here"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="681dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
