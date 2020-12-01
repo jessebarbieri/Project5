@@ -21,8 +21,5 @@ package="museumGo">
         android:name=".secondScreen"
         android:parentActivityName=".MainActivity"></activity>
 
-    <activity android:name=".thirdScreen"
-        android:parentActivityName=".secondScreen">
-    </activity>
 </application>
 </manifest>

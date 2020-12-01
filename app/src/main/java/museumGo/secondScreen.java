@@ -37,8 +37,8 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(secondScreen.this, thirdScreen.class);
-                    intent.putExtra("website", "https://www.metmuseum.org");
+                    Uri website = Uri.parse("https://www.metmuseum.org");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, website);
                     startActivity(intent);
                 }
             });
@@ -49,8 +49,8 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(secondScreen.this, thirdScreen.class);
-                    intent.putExtra("website", "https://www.moma.org");
+                    Uri website = Uri.parse("https://www.moma.org");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, website);
                     startActivity(intent);
                 }
             });
@@ -61,9 +61,9 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(secondScreen.this, thirdScreen.class);
-                    intent.putExtra("website", "https://www.amnh.org");
-                    startActivity(intent);
+                        Uri website = Uri.parse("https://www.amnh.org");
+                        Intent intent = new Intent(Intent.ACTION_VIEW, website);
+                        startActivity(intent);
                 }
             });
         }
@@ -73,8 +73,8 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(secondScreen.this, thirdScreen.class);
-                    intent.putExtra("website", "https://m.intrepidmuseum.org");
+                    Uri website = Uri.parse("https://m.intrepidmuseum.org");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, website);
                     startActivity(intent);
                 }
             });
