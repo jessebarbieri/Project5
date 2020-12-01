@@ -6,6 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".secondScreen">
 
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Adult Ticket"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Student Ticket"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="+"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:text="Enter value here"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:text="Enter value here"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="+"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="459dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Senior Ticket"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="550dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="603dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="98dp"
+        android:layout_height="46dp"
+        android:text="Enter value here"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="608dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="+"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="603dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
+        android:text="-"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="459dp" />
+
     <ImageView
         android:id="@+id/museumPic"
         android:layout_width="422dp"
@@ -16,4 +118,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/metpic" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Total here"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="681dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
