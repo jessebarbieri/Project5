@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * This class represents our second activity, where the user can get the price estimate of a visit
+ */
 public class secondScreen extends AppCompatActivity {
 
     String selectedMuseum;
@@ -24,17 +27,17 @@ public class secondScreen extends AppCompatActivity {
         selectedMuseum = getdata.getStringExtra("selectedMuseum");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Just testing to see that data was passed correctly
         Toast.makeText(secondScreen.this, selectedMuseum, Toast.LENGTH_LONG).show();
-
-
-        //
         museumPic = (ImageView) findViewById(R.id.museumPic);
 
         if(selectedMuseum.equals("The Metropolitan Museum of Art")){
             museumPic.setImageResource(R.drawable.metpic);
             museum MMA = new museum(10, 20, 15);
             museumPic.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * Is called when the image is clicked on, opens the website of the selected museum
+                 * @param v, the ImageView
+                 */
                 @Override
                 public void onClick(View v) {
                     Uri website = Uri.parse("https://www.metmuseum.org");
@@ -47,6 +50,10 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setImageResource(R.drawable.momapic);
             museum MOMA = new museum(11, 23, 17);
             museumPic.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * Is called when the image is clicked on, opens the website of the selected museum
+                 * @param v, the ImageView
+                 */
                 @Override
                 public void onClick(View v) {
                     Uri website = Uri.parse("https://www.moma.org");
@@ -59,6 +66,10 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setImageResource(R.drawable.historypic);
             museum AMNH = new museum(12, 23, 16);
             museumPic.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * Is called when the image is clicked on, opens the website of the selected museum
+                 * @param v, the ImageView
+                 */
                 @Override
                 public void onClick(View v) {
                         Uri website = Uri.parse("https://www.amnh.org");
@@ -71,6 +82,10 @@ public class secondScreen extends AppCompatActivity {
             museumPic.setImageResource(R.drawable.intrepid);
             museum Intrepid = new museum(8, 17, 12);
             museumPic.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * Is called when the image is clicked on, opens the website of the selected museum
+                 * @param v, the ImageView
+                 */
                 @Override
                 public void onClick(View v) {
                     Uri website = Uri.parse("https://m.intrepidmuseum.org");
@@ -78,12 +93,6 @@ public class secondScreen extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        }
-
-
-        // Showing the image
-        if(museumPic.isShown()){
-            System.out.println("It is on screen");
         }
     }
 
