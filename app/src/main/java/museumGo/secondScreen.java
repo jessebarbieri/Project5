@@ -126,7 +126,10 @@ public class secondScreen extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Subtract 1 from Student ticket total
+     * @param v
+     */
     public void onClickMinusStudent(View v)
     {
 
