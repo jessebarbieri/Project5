@@ -39,13 +39,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/minusStudent"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="74dp"
         android:layout_marginTop="286dp"
         android:layout_marginEnd="283dp"
         android:layout_marginBottom="394dp"
+        android:onClick="onClickMinusStudent"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,14 +68,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewStudent"
         android:layout_width="98dp"
         android:layout_height="46dp"
         android:layout_marginStart="156dp"
         android:layout_marginTop="286dp"
         android:layout_marginEnd="157dp"
         android:layout_marginBottom="399dp"
-        android:text="Enter value here"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +127,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/minusSenior"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="74dp"
@@ -167,7 +169,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/minusAdult"
         android:layout_width="54dp"
         android:layout_height="51dp"
         android:layout_marginStart="74dp"

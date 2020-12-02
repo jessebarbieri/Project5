@@ -13,6 +13,10 @@ public class museum {
     private double salesTax;
     private double ticketTotal;
 
+    public int students;
+    public int adults;
+    public int seniors;
+
     /**
      * Default constructor and initialize salesTax for NY
      * @param ticketPriceStudent
@@ -24,6 +28,10 @@ public class museum {
         this.ticketPriceAdult = ticketPriceAdult;
         this.ticketPriceSenior = ticketPriceSenior;
         salesTax = 0.08875;
+
+        students = 0;
+        adults = 0;
+        seniors = 0;
     }
 
     /**
@@ -50,8 +58,15 @@ public class museum {
     /**
      * Remove ticket to the current "list" of tickets
      */
-    public double removeTicket(){
-        return 0;
+    public int removeTicket(int numOfTickets, String type){
+        int returnVal = 0;
+
+        if(type.equals("Student")){
+            --students;
+            returnVal = --numOfTickets;
+        }
+
+        return returnVal;
     }
 
     /**
