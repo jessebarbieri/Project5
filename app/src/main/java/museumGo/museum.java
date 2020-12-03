@@ -51,8 +51,17 @@ public class museum {
      * Add ticket to the current "list" of tickets
      * @return double new value
      */
-    public double addTicket(){
-        return 0;
+    public int addTicket(int numOfTickets, String type){
+
+        int returnVal = 0;
+
+        if(type.equals("Student")){
+            ++students;
+            returnVal = ++numOfTickets;
+        }
+
+        return returnVal;
+
     }
 
     /**

@@ -129,13 +129,39 @@ public class secondScreen extends AppCompatActivity {
     {
 
         try {
-            int val = M.removeTicket(Integer.parseInt(textViewStudent.getText().toString()), "Student");
-            textViewStudent.setText(String.valueOf(val));
-            Toast.makeText(this, "Minus 1 Student Ticket", Toast.LENGTH_LONG).show();
+            int tic = Integer.parseInt(textViewStudent.getText().toString());
+            if(tic == 0){
+                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+            }else{
+                int val = M.removeTicket(tic, "Student");
+                textViewStudent.setText(String.valueOf(val));
+                Toast.makeText(this, "Minus 1 Student Ticket", Toast.LENGTH_LONG).show();
+            }
+
+
         }catch (NullPointerException e){
             Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    /**
+     * Increase 1 ticket for student
+     * @param v
+     */
+    public void onClickAddStudent(View v){
+        try {
+            int tic = Integer.parseInt(textViewStudent.getText().toString());
+
+            int val = M.addTicket(tic, "Student");
+            textViewStudent.setText(String.valueOf(val));
+            Toast.makeText(this, "Added 1 Student Ticket " + val, Toast.LENGTH_LONG).show();
+
+
+
+        }catch (NullPointerException e){
+            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+        }
     }
 
 }
