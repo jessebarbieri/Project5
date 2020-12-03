@@ -37,7 +37,6 @@ public class secondScreen extends AppCompatActivity {
         setContentView(R.layout.activity_second_screen);
 
 
-
         Toast.makeText(secondScreen.this, selectedMuseum, Toast.LENGTH_LONG).show();
         museumPic = (ImageView) findViewById(R.id.museumPic);
 
@@ -57,10 +56,8 @@ public class secondScreen extends AppCompatActivity {
                 }
             });
 
-            textViewStudent = (TextView)findViewById(R.id.textViewStudent);
-            if(textViewStudent!=null){
-                textViewStudent.setText("0");
-            }           }
+
+        }
         else if(selectedMuseum.equals("Museum of Modern Art (MoMA)")){
             museumPic.setImageResource(R.drawable.momapic);
             M = new museum(11, 23, 17);
@@ -77,10 +74,8 @@ public class secondScreen extends AppCompatActivity {
                 }
             });
 
-            textViewStudent = (TextView)findViewById(R.id.textViewStudent);
-            if(textViewStudent!=null){
-                textViewStudent.setText("0");
-            }           }
+
+        }
         else if(selectedMuseum.equals("American Museum of Natural History")){
             museumPic.setImageResource(R.drawable.historypic);
             M = new museum(12, 23, 16);
@@ -97,10 +92,7 @@ public class secondScreen extends AppCompatActivity {
                 }
             });
 
-            textViewStudent = (TextView)findViewById(R.id.textViewStudent);
-            if(textViewStudent!=null){
-                textViewStudent.setText("0");
-            }
+
         }
         else if(selectedMuseum.equals("Intrepid Sea, Air & Space Museum")){
             museumPic.setImageResource(R.drawable.intrepid);
@@ -117,11 +109,11 @@ public class secondScreen extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+        }
 
-            textViewStudent = (TextView)findViewById(R.id.textViewStudent);
-            if(textViewStudent!=null){
-                textViewStudent.setText("0");
-            }
+        textViewStudent = (TextView)findViewById(R.id.textViewStudent);
+        if(textViewStudent!=null){
+            textViewStudent.setText("0");
         }
 
     }
@@ -139,7 +131,7 @@ public class secondScreen extends AppCompatActivity {
             textViewStudent.setText(String.valueOf(val));
             Toast.makeText(this, "Subtracted, Total now is " + val, Toast.LENGTH_LONG).show();
         }catch (NullPointerException e){
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "nope nothing here", Toast.LENGTH_LONG).show();
         }
 
     }
