@@ -99,7 +99,7 @@ public class secondScreen extends AppCompatActivity {
                 break;
             case "The Metropolitan Museum of Art":
                 museumPic.setImageResource(R.drawable.metpic);
-                museum MMA = new museum(10, 20, 15);
+                M = new museum(10, 20, 15);
                 museumPic.setOnClickListener(new View.OnClickListener() {
                     /**
                      * Is called when the image is clicked on, opens the website of the selected museum
