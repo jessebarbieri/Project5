@@ -169,7 +169,9 @@ public class secondScreen extends AppCompatActivity {
 
                if (tic == max) {
                 Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
-                }else {
+                }else if (tic >= 5){
+                   Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
+               }else {
 
                    int val = M.addTicket(tic, "Student");
                    textViewStudent.setText(String.valueOf(val));
@@ -195,7 +197,7 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewAdult.getText().toString());
             if (tic == 0) {
                 Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
-            } else {
+            }else {
                 int val = M.removeTicket(tic, "Adult");
                 textViewAdult.setText(String.valueOf(val));
                 Toast.makeText(this, "Minus 1 Adult Ticket", Toast.LENGTH_LONG).show();
@@ -222,6 +224,8 @@ public class secondScreen extends AppCompatActivity {
 
             if (tic == max) {
                 Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
+            }else if (tic >= 5){
+                Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
             }else {
 
                 int val = M.addTicket(tic, "Adult");
@@ -274,8 +278,8 @@ public class secondScreen extends AppCompatActivity {
             int max = 5;
 
 
-            if (tic == max) {
-                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
+            if (tic >= 5){
+                Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
             }else {
                 int val = M.addTicket(tic, "Senior");
                 textViewSenior.setText(String.valueOf(val));
