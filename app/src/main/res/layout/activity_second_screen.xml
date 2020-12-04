@@ -85,14 +85,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewAdult"
         android:layout_width="98dp"
         android:layout_height="46dp"
         android:layout_marginStart="156dp"
         android:layout_marginTop="398dp"
         android:layout_marginEnd="157dp"
         android:layout_marginBottom="287dp"
-        android:text="Enter value here"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,6 +106,7 @@
         android:layout_marginTop="398dp"
         android:layout_marginEnd="71dp"
         android:layout_marginBottom="282dp"
+        android:onClick="onClickAddAdult"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,6 +137,7 @@
         android:layout_marginTop="512dp"
         android:layout_marginEnd="283dp"
         android:layout_marginBottom="168dp"
+        android:onClick="onClickMinusSenior"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,14 +145,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewSenior"
         android:layout_width="98dp"
         android:layout_height="46dp"
         android:layout_marginStart="156dp"
         android:layout_marginTop="512dp"
         android:layout_marginEnd="157dp"
         android:layout_marginBottom="173dp"
-        android:text="Enter value here"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -164,6 +166,7 @@
         android:layout_marginTop="512dp"
         android:layout_marginEnd="71dp"
         android:layout_marginBottom="168dp"
+        android:onClick="onClickAddSenior"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -178,6 +181,7 @@
         android:layout_marginTop="398dp"
         android:layout_marginEnd="283dp"
         android:layout_marginBottom="282dp"
+        android:onClick="onClickMinusAdult"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +201,7 @@
         tools:src="@drawable/metpic" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/totalBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -206,7 +210,8 @@
         android:layout_marginBottom="116dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Total here"
+        android:text="0"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
