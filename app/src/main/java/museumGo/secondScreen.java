@@ -163,13 +163,10 @@ public class secondScreen extends AppCompatActivity {
     public void onClickAddStudent(View v) {
         try {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
-            int zero = 0;
             int max = 5;
 
 
-               if (tic == max) {
-                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
-                }else if (tic >= 5){
+               if (tic >= 5){
                    Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
                }else {
 
@@ -217,14 +214,11 @@ public class secondScreen extends AppCompatActivity {
      */
     public void onClickAddAdult(View v) {
         try {
-            int tic = Integer.parseInt(textViewStudent.getText().toString());
-            int zero = 0;
+            int tic = Integer.parseInt(textViewAdult.getText().toString());
             int max = 5;
 
 
-            if (tic == max) {
-                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
-            }else if (tic >= 5){
+            if (tic >= 5){
                 Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
             }else {
 
@@ -273,7 +267,7 @@ public class secondScreen extends AppCompatActivity {
      */
     public void onClickAddSenior(View v) {
         try {
-            int tic = Integer.parseInt(textViewStudent.getText().toString());
+            int tic = Integer.parseInt(textViewSenior.getText().toString());
             int zero = 0;
             int max = 5;
 
