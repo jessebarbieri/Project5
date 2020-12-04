@@ -1,5 +1,7 @@
 package museumGo;
 
+import java.text.DecimalFormat;
+
 /**
  * Class handles museum name, prices for each tickets,
  */
@@ -27,8 +29,10 @@ public class museum {
         this.ticketPriceStudent = ticketPriceStudent;
         this.ticketPriceAdult = ticketPriceAdult;
         this.ticketPriceSenior = ticketPriceSenior;
-        salesTax = 0.08875;
 
+        // variables
+        salesTax = 0.08875;
+        ticketTotal = 0;
         students = 0;
         adults = 0;
         seniors = 0;
@@ -54,10 +58,30 @@ public class museum {
     public int addTicket(int numOfTickets, String type){
 
         int returnVal = 0;
+        int max = 5;
 
         if(type.equals("Student")){
-            ++students;
-            returnVal = ++numOfTickets;
+            if(numOfTickets <= max){
+                ++students;
+                returnVal = ++numOfTickets;
+            }else{
+                return numOfTickets;
+            }
+
+        }if(type.equals("Adult")){
+            if(numOfTickets <= max){
+                ++adults;
+                returnVal = ++numOfTickets;
+            }else{
+                return numOfTickets;
+            }
+        }if(type.equals("Senior")){
+            if(numOfTickets <= max){
+                ++seniors;
+                returnVal = ++numOfTickets;
+            }else{
+                return numOfTickets;
+            }
         }
 
         return returnVal;
@@ -73,6 +97,12 @@ public class museum {
         if(type.equals("Student")){
             --students;
             returnVal = --numOfTickets;
+        }else if(type.equals("Adult")){
+            --adults;
+            returnVal = --numOfTickets;
+        }else  if(type.equals("Senior")){
+            --seniors;
+            returnVal = --numOfTickets;
         }
 
         return returnVal;
@@ -83,7 +113,14 @@ public class museum {
      * @return double total price
      */
     public double totalPrice(){
-        return 0;
+        double ticketTotal1 =  students*ticketPriceStudent;
+        double ticketTotal2 =  seniors*ticketPriceSenior;
+        double ticketTotal3 =  adults*ticketPriceAdult;
+
+        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        return Double.parseDouble(df.format(total*(1+salesTax)));
     }
 
 }

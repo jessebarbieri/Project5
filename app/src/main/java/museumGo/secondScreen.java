@@ -22,12 +22,15 @@ public class secondScreen extends AppCompatActivity {
     Button minusAdult;
     Button minusSenior;
     TextView textViewStudent;
+    TextView textViewAdult;
+    TextView textViewSenior;
+    TextView totalBox;
 
 
     museum M;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_screen);
         Intent getdata = getIntent();
@@ -38,9 +41,16 @@ public class secondScreen extends AppCompatActivity {
         Toast.makeText(secondScreen.this, selectedMuseum, Toast.LENGTH_LONG).show();
         museumPic = (ImageView) findViewById(R.id.museumPic);
 
-        ((TextView)findViewById(R.id.textViewStudent)).setText("0");
-        textViewStudent = ((TextView)findViewById(R.id.textViewStudent));
+        ((TextView) findViewById(R.id.textViewStudent)).setText("0");
+        textViewStudent = ((TextView) findViewById(R.id.textViewStudent));
         textViewStudent.setText("0");
+
+        textViewAdult = ((TextView) findViewById(R.id.textViewAdult));
+        textViewAdult.setText("0");
+
+        textViewSenior = ((TextView) findViewById(R.id.textViewSenior));
+        textViewSenior.setText("0");
+
 
         switch (selectedMuseum) {
             case "Museum of Modern Art (MoMA)":
@@ -118,28 +128,28 @@ public class secondScreen extends AppCompatActivity {
         }
 
 
-
     }
 
     /**
      * Subtract 1 from Student ticket total
+     *
      * @param v
      */
-    public void onClickMinusStudent(View v)
-    {
+    public void onClickMinusStudent(View v) {
 
         try {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
-            if(tic == 0){
+            if (tic == 0) {
                 Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
-            }else{
+            } else {
                 int val = M.removeTicket(tic, "Student");
                 textViewStudent.setText(String.valueOf(val));
                 Toast.makeText(this, "Minus 1 Student Ticket", Toast.LENGTH_LONG).show();
             }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
 
-
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
         }
 
@@ -147,19 +157,134 @@ public class secondScreen extends AppCompatActivity {
 
     /**
      * Increase 1 ticket for student
+     *
      * @param v
      */
-    public void onClickAddStudent(View v){
+    public void onClickAddStudent(View v) {
         try {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
-
-            int val = M.addTicket(tic, "Student");
-            textViewStudent.setText(String.valueOf(val));
-            Toast.makeText(this, "Added 1 Student Ticket " + val, Toast.LENGTH_LONG).show();
+            int zero = 0;
+            int max = 5;
 
 
+               if (tic == max) {
+                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
+                }else {
 
-        }catch (NullPointerException e){
+                   int val = M.addTicket(tic, "Student");
+                   textViewStudent.setText(String.valueOf(val));
+                   Toast.makeText(this, "Added 1 Student Ticket " + val, Toast.LENGTH_LONG).show();
+               }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
+
+        } catch (NullPointerException e) {
+            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    /**
+     * Subtract 1 from Student ticket total
+     *
+     * @param v
+     */
+    public void onClickMinusAdult(View v) {
+
+        try {
+            int tic = Integer.parseInt(textViewAdult.getText().toString());
+            if (tic == 0) {
+                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+            } else {
+                int val = M.removeTicket(tic, "Adult");
+                textViewAdult.setText(String.valueOf(val));
+                Toast.makeText(this, "Minus 1 Adult Ticket", Toast.LENGTH_LONG).show();
+            }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
+
+        } catch (NullPointerException e) {
+            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Decrease 1 ticket for student
+     *
+     * @param v
+     */
+    public void onClickAddAdult(View v) {
+        try {
+            int tic = Integer.parseInt(textViewStudent.getText().toString());
+            int zero = 0;
+            int max = 5;
+
+
+            if (tic == max) {
+                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
+            }else {
+
+                int val = M.addTicket(tic, "Adult");
+                textViewAdult.setText(String.valueOf(val));
+                Toast.makeText(this, "Added 1 Adult Ticket " + val, Toast.LENGTH_LONG).show();
+            }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
+
+        } catch (NullPointerException e) {
+            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    /**
+     * Subtract 1 from Senior ticket total
+     *
+     * @param v
+     */
+    public void onClickMinusSenior(View v) {
+
+        try {
+            int tic = Integer.parseInt(textViewSenior.getText().toString());
+            if (tic == 0) {
+                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+            } else {
+                int val = M.removeTicket(tic, "Senior");
+                textViewSenior.setText(String.valueOf(val));
+                Toast.makeText(this, "Minus 1 Senior Ticket", Toast.LENGTH_LONG).show();
+            }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
+
+        } catch (NullPointerException e) {
+            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    /**
+     * Increase 1 ticket for Senior
+     *
+     * @param v
+     */
+    public void onClickAddSenior(View v) {
+        try {
+            int tic = Integer.parseInt(textViewStudent.getText().toString());
+            int zero = 0;
+            int max = 5;
+
+
+            if (tic == max) {
+                Toast.makeText(this, "Cannot exceed 5 tickets", Toast.LENGTH_LONG).show();
+            }else {
+                int val = M.addTicket(tic, "Senior");
+                textViewSenior.setText(String.valueOf(val));
+                Toast.makeText(this, "Added 1 Senior Ticket " + val, Toast.LENGTH_LONG).show();
+            }
+            totalBox = ((TextView) findViewById(R.id.totalBox));
+            totalBox.setText(String.valueOf(M.totalPrice()));
+
+        } catch (NullPointerException e) {
             Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
         }
     }
