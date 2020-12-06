@@ -51,8 +51,8 @@ public class secondScreen extends AppCompatActivity {
         textViewSenior = ((TextView) findViewById(R.id.textViewSenior));
         textViewSenior.setText("0");
 
-
         switch (selectedMuseum) {
+
             case "Museum of Modern Art (MoMA)":
                 museumPic.setImageResource(R.drawable.momapic);
                 M = new museum(11, 23, 17);
@@ -123,11 +123,15 @@ public class secondScreen extends AppCompatActivity {
                     }
                 });
 
-
                 break;
         }
 
-
+        TextView studentView = (TextView)findViewById(R.id.studentView);
+        studentView.setText("$" + M.ticketPriceSt());
+        TextView adultView = (TextView)findViewById(R.id.adultView);
+        adultView.setText("$" + M.ticketPriceA());
+        TextView seniorView = (TextView)findViewById(R.id.seniorView);
+        seniorView.setText("$" + M.ticketPriceS());
     }
 
     /**
