@@ -113,14 +113,8 @@ public class museum {
      * @return double total price
      */
     public double totalPrice(){
-        double ticketTotal1 =  students*ticketPriceStudent;
-        double ticketTotal2 =  seniors*ticketPriceSenior;
-        double ticketTotal3 =  adults*ticketPriceAdult;
-
-        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
         DecimalFormat df = new DecimalFormat("#.00");
-
-        return Double.parseDouble(df.format(total*(1+salesTax)));
+        return Double.parseDouble(df.format(totalNoTax()*(1+salesTax)));
     }
 
     public double totalNoTax(){
@@ -135,14 +129,8 @@ public class museum {
     }
 
     public double getSalesTax(){
-        double ticketTotal1 =  students*ticketPriceStudent;
-        double ticketTotal2 =  seniors*ticketPriceSenior;
-        double ticketTotal3 =  adults*ticketPriceAdult;
-
-        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
         DecimalFormat df = new DecimalFormat("#.00");
-
-        return Double.parseDouble(df.format(total*(salesTax)));
+        return Double.parseDouble(df.format(totalNoTax()*(salesTax)));
     }
 
 }
