@@ -123,4 +123,26 @@ public class museum {
         return Double.parseDouble(df.format(total*(1+salesTax)));
     }
 
+    public double totalNoTax(){
+        double ticketTotal1 =  students*ticketPriceStudent;
+        double ticketTotal2 =  seniors*ticketPriceSenior;
+        double ticketTotal3 =  adults*ticketPriceAdult;
+
+        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        return Double.parseDouble(df.format(total));
+    }
+
+    public double getSalesTax(){
+        double ticketTotal1 =  students*ticketPriceStudent;
+        double ticketTotal2 =  seniors*ticketPriceSenior;
+        double ticketTotal3 =  adults*ticketPriceAdult;
+
+        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        return Double.parseDouble(df.format(total*(salesTax)));
+    }
+
 }

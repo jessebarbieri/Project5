@@ -7,6 +7,44 @@
     tools:context=".secondScreen">
 
     <EditText
+        android:id="@+id/salesTax"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="118dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="0"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/priceTaxless"
+        android:layout_width="114dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="281dp"
+        android:layout_marginBottom="118dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:text="0"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="365dp"
         android:layout_height="42dp"
@@ -212,12 +250,12 @@
 
     <EditText
         android:id="@+id/totalBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="570dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="116dp"
+        android:layout_width="111dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="118dp"
         android:clickable="false"
         android:ems="10"
         android:focusable="false"
@@ -266,6 +304,48 @@
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="244dp"
         android:text="0.00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="613dp"
+        android:layout_marginEnd="321dp"
+        android:layout_marginBottom="99dp"
+        android:text="Ticket Price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="613dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="99dp"
+        android:text="Sales Tax"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="286dp"
+        android:layout_marginTop="613dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="99dp"
+        android:text="Total Price"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
