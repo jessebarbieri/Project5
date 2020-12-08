@@ -24,9 +24,9 @@ public class museum {
 
     /**
      * Default constructor and initialize salesTax for NY
-     * @param ticketPriceStudent
-     * @param ticketPriceAdult
-     * @param ticketPriceSenior
+     * @param ticketPriceStudent price set for student
+     * @param ticketPriceAdult price set for adult
+     * @param ticketPriceSenior price set for senior
      */
     public museum(int ticketPriceStudent, int ticketPriceAdult, int ticketPriceSenior){
         this.ticketPriceStudent = ticketPriceStudent;
@@ -115,33 +115,30 @@ public class museum {
      * Find total price with sales tax on it
      * @return double total price
      */
-    public double totalPrice(){
-        DecimalFormat df = new DecimalFormat("#.00");
-        return Double.parseDouble(df.format(totalNoTax()*(1+salesTax)));
+    public String totalPrice(){
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        return (df.format(totalNoTax()*(1+salesTax)));
     }
 
     /**
      * Finds total price without sales tax on it
      * @return double total price without tax
      */
-    public double totalNoTax(){
-        double ticketTotal1 =  students*ticketPriceStudent;
-        double ticketTotal2 =  seniors*ticketPriceSenior;
-        double ticketTotal3 =  adults*ticketPriceAdult;
+    public int totalNoTax(){
+        int ticketTotal1 =  students*ticketPriceStudent;
+        int ticketTotal2 =  seniors*ticketPriceSenior;
+        int ticketTotal3 =  adults*ticketPriceAdult;
 
-        double total = ticketTotal1 + ticketTotal2 + ticketTotal3;
-        DecimalFormat df = new DecimalFormat("#.00");
-
-        return Double.parseDouble(df.format(total));
+        return ticketTotal1 + ticketTotal2 + ticketTotal3;
     }
 
     /**
      * Finds the sales tax of the total
      * @return double tax amount
      */
-    public double getSalesTax(){
-        DecimalFormat df = new DecimalFormat("#.00");
-        return Double.parseDouble(df.format(totalNoTax()*(salesTax)));
+    public String getSalesTax(){
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        return (df.format(totalNoTax()*(salesTax)));
     }
 
 }

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Override onCreate sets what is displayed on the screen and functionality
-     * @param savedInstanceState
+     * @param savedInstanceState saved Instance State
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             /**
              * When a listView item is selected we pass the selection to the second screen
-             * @param parent
-             * @param view
-             * @param position
-             * @param id
+             * @param parent adapter view
+             * @param view view
+             * @param position position
+             * @param id id
              */
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
