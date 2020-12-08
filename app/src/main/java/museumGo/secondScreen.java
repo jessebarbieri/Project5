@@ -328,7 +328,7 @@ public class secondScreen extends AppCompatActivity {
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
             priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText("$" + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
             warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
