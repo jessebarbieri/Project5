@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,7 +28,7 @@ public class secondScreen extends AppCompatActivity {
     TextView totalBox;
     TextView priceTaxless;
     TextView salesTax;
-
+    Toast warnings;
 
     museum M;
 
@@ -40,7 +41,7 @@ public class secondScreen extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Ticket Price Calculator");
 
-        Toast.makeText(secondScreen.this, selectedMuseum, Toast.LENGTH_LONG).show();
+        Toast.makeText(secondScreen.this, R.string.maxWarning, Toast.LENGTH_SHORT).show();
         museumPic = (ImageView) findViewById(R.id.museumPic);
 
         ((TextView) findViewById(R.id.textViewStudent)).setText("0");
@@ -127,7 +128,8 @@ public class secondScreen extends AppCompatActivity {
 
                 break;
         }
-
+        TextView selectedShow = (TextView) findViewById(R.id.selectedShow);
+        selectedShow.setText(selectedMuseum);
         TextView studentView = (TextView)findViewById(R.id.studentView);
         studentView.setText("$" + M.ticketPriceSt());
         TextView adultView = (TextView)findViewById(R.id.adultView);
@@ -145,12 +147,12 @@ public class secondScreen extends AppCompatActivity {
 
         try {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
+
             if (tic == 0) {
-                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+                warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             } else {
                 int val = M.removeTicket(tic, "Student");
                 textViewStudent.setText(String.valueOf(val));
-                Toast.makeText(this, "Minus 1 Student Ticket", Toast.LENGTH_LONG).show();
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -161,7 +163,7 @@ public class secondScreen extends AppCompatActivity {
 
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
 
     }
@@ -176,14 +178,12 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
             int max = 5;
 
-
                if (tic >= 5){
-                   Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
+                   warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
                }else {
 
                    int val = M.addTicket(tic, "Student");
                    textViewStudent.setText(String.valueOf(val));
-                   Toast.makeText(this, "Added 1 Student Ticket " + val, Toast.LENGTH_LONG).show();
                }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -193,7 +193,7 @@ public class secondScreen extends AppCompatActivity {
             salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -207,12 +207,12 @@ public class secondScreen extends AppCompatActivity {
 
         try {
             int tic = Integer.parseInt(textViewAdult.getText().toString());
+
             if (tic == 0) {
-                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+                warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             }else {
                 int val = M.removeTicket(tic, "Adult");
                 textViewAdult.setText(String.valueOf(val));
-                Toast.makeText(this, "Minus 1 Adult Ticket", Toast.LENGTH_LONG).show();
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -222,7 +222,7 @@ public class secondScreen extends AppCompatActivity {
             salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -236,14 +236,12 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewAdult.getText().toString());
             int max = 5;
 
-
             if (tic >= 5){
-                Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
+                warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
             }else {
 
                 int val = M.addTicket(tic, "Adult");
                 textViewAdult.setText(String.valueOf(val));
-                Toast.makeText(this, "Added 1 Adult Ticket " + val, Toast.LENGTH_LONG).show();
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -253,7 +251,7 @@ public class secondScreen extends AppCompatActivity {
             salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -267,12 +265,12 @@ public class secondScreen extends AppCompatActivity {
 
         try {
             int tic = Integer.parseInt(textViewSenior.getText().toString());
+
             if (tic == 0) {
-                Toast.makeText(this, "Please add a ticket first!", Toast.LENGTH_LONG).show();
+                warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             } else {
                 int val = M.removeTicket(tic, "Senior");
                 textViewSenior.setText(String.valueOf(val));
-                Toast.makeText(this, "Minus 1 Senior Ticket", Toast.LENGTH_LONG).show();
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -282,7 +280,7 @@ public class secondScreen extends AppCompatActivity {
             salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
 
     }
@@ -298,13 +296,11 @@ public class secondScreen extends AppCompatActivity {
             int zero = 0;
             int max = 5;
 
-
             if (tic >= 5){
-                Toast.makeText(this, "Reached Max Number of Tickets", Toast.LENGTH_LONG).show();
+                warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
             }else {
                 int val = M.addTicket(tic, "Senior");
                 textViewSenior.setText(String.valueOf(val));
-                Toast.makeText(this, "Added 1 Senior Ticket " + val, Toast.LENGTH_LONG).show();
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
@@ -314,7 +310,7 @@ public class secondScreen extends AppCompatActivity {
             salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
 
         } catch (NullPointerException e) {
-            Toast.makeText(this, "Null", Toast.LENGTH_LONG).show();
+            warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
         }
     }
 
