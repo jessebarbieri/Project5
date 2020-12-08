@@ -55,15 +55,15 @@ public class secondScreen extends AppCompatActivity {
         Toast.makeText(secondScreen.this, R.string.maxWarning, Toast.LENGTH_SHORT).show();
         museumPic = (ImageView) findViewById(R.id.museumPic);
 
-        ((TextView) findViewById(R.id.textViewStudent)).setText("0");
+        ((TextView) findViewById(R.id.textViewStudent)).setText(R.string.zero);
         textViewStudent = ((TextView) findViewById(R.id.textViewStudent));
-        textViewStudent.setText("0");
+        textViewStudent.setText(R.string.zero);
 
         textViewAdult = ((TextView) findViewById(R.id.textViewAdult));
-        textViewAdult.setText("0");
+        textViewAdult.setText(R.string.zero);
 
         textViewSenior = ((TextView) findViewById(R.id.textViewSenior));
-        textViewSenior.setText("0");
+        textViewSenior.setText(R.string.zero);
 
         switch (selectedMuseum) {
 
@@ -196,13 +196,13 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
             int max = 5;
 
-               if (tic >= max){
-                   warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
-               }else {
+            if (tic >= max){
+                warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
+            }else {
 
-                   int val = M.addTicket(tic, "Student");
-                   textViewStudent.setText(String.valueOf(val));
-               }
+                int val = M.addTicket(tic, "Student");
+                textViewStudent.setText(String.valueOf(val));
+            }
             totalBox = ((TextView) findViewById(R.id.totalBox));
             totalBox.setText("$ " + String.valueOf(M.totalPrice()));
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));

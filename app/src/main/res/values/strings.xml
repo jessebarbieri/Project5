@@ -11,4 +11,15 @@
     <string name="americanHistory">American Museum of Natural History</string>
     <string name="intrepid">Intrepid Sea, Air and Space Museum</string>
     <string name="metName">The Metropolitan Museum of Art</string>
+    <string name="adultTicket">Adult Ticket</string>
+    <string name="studentTicket">Student Ticket</string>
+    <string name="seniorTicket">Senior Ticket</string>
+    <string name="ticketPrice">Ticket Price</string>
+    <string name="salesTax">Sales Tax</string>
+    <string name="totalPrice">Total Price</string>
+    <string name="zeroDollars">$ 0.00</string>
+    <string name="minusSign">-</string>
+    <string name="plusSign">+</string>
+    <string name="zero">0</string>
+    <string name="doubleZero">0.00</string>
 </resources>

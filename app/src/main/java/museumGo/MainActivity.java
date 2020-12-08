@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ListView list = findViewById(R.id.list);
+
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("The Metropolitan Museum of Art");
         arrayList.add("Museum of Modern Art (MoMA)");
