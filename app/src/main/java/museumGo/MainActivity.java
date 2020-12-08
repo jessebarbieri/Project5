@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         final ListView list = findViewById(R.id.list);
 
         ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("The Metropolitan Museum of Art");
-        arrayList.add("Museum of Modern Art (MoMA)");
-        arrayList.add("American Museum of Natural History");
-        arrayList.add("Intrepid Sea, Air & Space Museum");
+        arrayList.add(getString(R.string.metName));
+        arrayList.add(getString(R.string.moma));
+        arrayList.add(getString(R.string.americanHistory));
+        arrayList.add(getString(R.string.intrepid));
         setTitle(R.string.mainTitle);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
         list.setAdapter(arrayAdapter);

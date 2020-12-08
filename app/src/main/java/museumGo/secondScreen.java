@@ -107,7 +107,7 @@ public class secondScreen extends AppCompatActivity {
 
 
                 break;
-            case "Intrepid Sea, Air & Space Museum":
+            case "Intrepid Sea, Air and Space Museum":
                 museumPic.setImageResource(R.drawable.intrepid);
                 M = new museum(8, 17, 12);
                 selectedShow.setText(R.string.intrepid);
@@ -148,11 +148,11 @@ public class secondScreen extends AppCompatActivity {
                 break;
         }
         TextView studentView = (TextView)findViewById(R.id.studentView);
-        studentView.setText("$" + M.ticketPriceSt());
+        studentView.setText(getString(R.string.dollarSign) + M.ticketPriceSt());
         TextView adultView = (TextView)findViewById(R.id.adultView);
-        adultView.setText("$" + M.ticketPriceA());
+        adultView.setText(getString(R.string.dollarSign) + M.ticketPriceA());
         TextView seniorView = (TextView)findViewById(R.id.seniorView);
-        seniorView.setText("$" + M.ticketPriceS());
+        seniorView.setText(getString(R.string.dollarSign) + M.ticketPriceS());
     }
 
     /**
@@ -173,11 +173,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewStudent.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
 
         } catch (NullPointerException e) {
@@ -204,11 +204,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewStudent.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
         } catch (NullPointerException e) {
             warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
@@ -235,11 +235,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewAdult.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
         } catch (NullPointerException e) {
             Toast.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
@@ -264,11 +264,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewAdult.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
         } catch (NullPointerException e) {
             warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
@@ -294,11 +294,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewSenior.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$ " + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
         } catch (NullPointerException e) {
             warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
@@ -324,11 +324,11 @@ public class secondScreen extends AppCompatActivity {
                 textViewSenior.setText(String.valueOf(val));
             }
             totalBox = ((TextView) findViewById(R.id.totalBox));
-            totalBox.setText("$ " + String.valueOf(M.totalPrice()));
+            totalBox.setText(getString(R.string.dollarSign) + M.totalPrice());
             priceTaxless = ((TextView) findViewById(R.id.priceTaxless));
-            priceTaxless.setText("$ " + String.valueOf(M.totalNoTax()));
+            priceTaxless.setText(getString(R.string.dollarSign) + M.totalNoTax());
             salesTax = ((TextView) findViewById(R.id.salesTax));
-            salesTax.setText("$" + String.valueOf(M.getSalesTax()));
+            salesTax.setText(getString(R.string.dollarSign) + M.getSalesTax());
 
         } catch (NullPointerException e) {
             warnings.makeText(this, R.string.nullPointE, Toast.LENGTH_LONG).show();
