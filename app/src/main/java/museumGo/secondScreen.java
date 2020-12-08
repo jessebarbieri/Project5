@@ -147,8 +147,9 @@ public class secondScreen extends AppCompatActivity {
 
         try {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
+            int zero = 0;
 
-            if (tic == 0) {
+            if (tic == zero) {
                 warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             } else {
                 int val = M.removeTicket(tic, "Student");
@@ -178,7 +179,7 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewStudent.getText().toString());
             int max = 5;
 
-               if (tic >= 5){
+               if (tic >= max){
                    warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
                }else {
 
@@ -207,8 +208,10 @@ public class secondScreen extends AppCompatActivity {
 
         try {
             int tic = Integer.parseInt(textViewAdult.getText().toString());
+            int zero = 0;
+            int max = 5;
 
-            if (tic == 0) {
+            if (tic == zero) {
                 warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             }else {
                 int val = M.removeTicket(tic, "Adult");
@@ -236,7 +239,7 @@ public class secondScreen extends AppCompatActivity {
             int tic = Integer.parseInt(textViewAdult.getText().toString());
             int max = 5;
 
-            if (tic >= 5){
+            if (tic >= max){
                 warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
             }else {
 
@@ -262,11 +265,12 @@ public class secondScreen extends AppCompatActivity {
      * @param v
      */
     public void onClickMinusSenior(View v) {
-
         try {
             int tic = Integer.parseInt(textViewSenior.getText().toString());
+            int zero = 0;
+            int max = 5;
 
-            if (tic == 0) {
+            if (tic == zero) {
                 warnings.makeText(this, R.string.minusWarning, Toast.LENGTH_SHORT).show();
             } else {
                 int val = M.removeTicket(tic, "Senior");
@@ -296,7 +300,7 @@ public class secondScreen extends AppCompatActivity {
             int zero = 0;
             int max = 5;
 
-            if (tic >= 5){
+            if (tic >= max){
                 warnings.makeText(this, R.string.maxReached, Toast.LENGTH_SHORT).show();
             }else {
                 int val = M.addTicket(tic, "Senior");
