@@ -49,6 +49,7 @@ public class secondScreen extends AppCompatActivity {
         Intent getdata = getIntent();
         selectedMuseum = getdata.getStringExtra("selectedMuseum");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        TextView selectedShow = (TextView) findViewById(R.id.selectedShow);
         setTitle(R.string.secondTitle);
 
         Toast.makeText(secondScreen.this, R.string.maxWarning, Toast.LENGTH_SHORT).show();
@@ -69,6 +70,8 @@ public class secondScreen extends AppCompatActivity {
             case "Museum of Modern Art (MoMA)":
                 museumPic.setImageResource(R.drawable.momapic);
                 M = new museum(11, 23, 17);
+                selectedShow.setText(R.string.moma);
+
                 museumPic.setOnClickListener(new View.OnClickListener() {
                     /**
                      * Is called when the image is clicked on, opens the website of the selected museum
@@ -87,6 +90,8 @@ public class secondScreen extends AppCompatActivity {
             case "American Museum of Natural History":
                 museumPic.setImageResource(R.drawable.historypic);
                 M = new museum(12, 23, 16);
+                selectedShow.setText(R.string.americanHistory);
+
                 museumPic.setOnClickListener(new View.OnClickListener() {
                     /**
                      * Is called when the image is clicked on, opens the website of the selected museum
@@ -105,6 +110,8 @@ public class secondScreen extends AppCompatActivity {
             case "Intrepid Sea, Air & Space Museum":
                 museumPic.setImageResource(R.drawable.intrepid);
                 M = new museum(8, 17, 12);
+                selectedShow.setText(R.string.intrepid);
+
                 museumPic.setOnClickListener(new View.OnClickListener() {
                     /**
                      * Is called when the image is clicked on, opens the website of the selected museum
@@ -123,6 +130,8 @@ public class secondScreen extends AppCompatActivity {
             case "The Metropolitan Museum of Art":
                 museumPic.setImageResource(R.drawable.metpic);
                 M = new museum(10, 20, 15);
+                selectedShow.setText(R.string.metName);
+
                 museumPic.setOnClickListener(new View.OnClickListener() {
                     /**
                      * Is called when the image is clicked on, opens the website of the selected museum
@@ -138,8 +147,6 @@ public class secondScreen extends AppCompatActivity {
 
                 break;
         }
-        TextView selectedShow = (TextView) findViewById(R.id.selectedShow);
-        selectedShow.setText(selectedMuseum);
         TextView studentView = (TextView)findViewById(R.id.studentView);
         studentView.setText("$" + M.ticketPriceSt());
         TextView adultView = (TextView)findViewById(R.id.adultView);

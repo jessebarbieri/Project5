@@ -7,5 +7,8 @@
     <string name="minusWarning">Please add a ticket first!</string>
     <string name="nullPointE">Null</string>
     <string name="maxReached">Reached Maximum Number of Tickets!</string>
-    <string name="selectedMuseum"></string>
+    <string name="moma">Museum of Modern Art (MoMA)</string>
+    <string name="americanHistory">American Museum of Natural History</string>
+    <string name="intrepid">Intrepid Sea, Air and Space Museum</string>
+    <string name="metName">The Metropolitan Museum of Art</string>
 </resources>
