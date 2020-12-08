@@ -1,3 +1,6 @@
+/**
+ * @author Arya Kulkarni and Jesse Barbieri
+ */
 package museumGo;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,9 @@ import android.widget.Toast;
  */
 public class secondScreen extends AppCompatActivity {
 
+    /**
+     * Declare variables
+     */
     String selectedMuseum;
     ImageView museumPic;
     Button minusStudent;
@@ -32,6 +38,10 @@ public class secondScreen extends AppCompatActivity {
 
     museum M;
 
+    /**
+     * onCreate method displays items on the secondScreen activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

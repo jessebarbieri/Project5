@@ -1,3 +1,6 @@
+/**
+ * @author Arya Kulkarni and Jesse Barbieri
+ */
 package museumGo;
 
 import java.text.DecimalFormat;
@@ -117,6 +120,10 @@ public class museum {
         return Double.parseDouble(df.format(totalNoTax()*(1+salesTax)));
     }
 
+    /**
+     * Finds total price without sales tax on it
+     * @return double total price without tax
+     */
     public double totalNoTax(){
         double ticketTotal1 =  students*ticketPriceStudent;
         double ticketTotal2 =  seniors*ticketPriceSenior;
@@ -128,6 +135,10 @@ public class museum {
         return Double.parseDouble(df.format(total));
     }
 
+    /**
+     * Finds the sales tax of the total
+     * @return double tax amount
+     */
     public double getSalesTax(){
         DecimalFormat df = new DecimalFormat("#.00");
         return Double.parseDouble(df.format(totalNoTax()*(salesTax)));
