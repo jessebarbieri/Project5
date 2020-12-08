@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Museum Go</string>
+    <string name="mainTitle">Museum Go - Ticket Finder</string>
+    <string name="secondTitle">Ticket Price Calculator</string>
     <string name="a_picture_of_the_museum_selected">A picture of the museum selected</string>
     <string name="maxWarning">Maximum of 5 tickets for each!</string>
     <string name="minusWarning">Please add a ticket first!</string>
     <string name="nullPointE">Null</string>
     <string name="maxReached">Reached Maximum Number of Tickets!</string>
+    <string name="selectedMuseum"></string>
 </resources>

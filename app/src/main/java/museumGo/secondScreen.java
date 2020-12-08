@@ -49,7 +49,7 @@ public class secondScreen extends AppCompatActivity {
         Intent getdata = getIntent();
         selectedMuseum = getdata.getStringExtra("selectedMuseum");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle("Ticket Price Calculator");
+        setTitle(R.string.secondTitle);
 
         Toast.makeText(secondScreen.this, R.string.maxWarning, Toast.LENGTH_SHORT).show();
         museumPic = (ImageView) findViewById(R.id.museumPic);

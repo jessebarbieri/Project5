@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add("Museum of Modern Art (MoMA)");
         arrayList.add("American Museum of Natural History");
         arrayList.add("Intrepid Sea, Air & Space Museum");
-        setTitle("Museum Go - Ticket Finder");
+        setTitle(R.string.mainTitle);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
         list.setAdapter(arrayAdapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
